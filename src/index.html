@@ -3,10 +3,367 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Portfolio</title>
   </head>
-  <body>
-    <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1> -->
+  <body class="font-nunito">
+    <!-- intro section -->
+    <div
+      class="h-[50vh] lg:h-screen bg-gradient-to-t from-blue-200 relative overflow-hidden dark:from-slate-800 dark:to-slate-900"
+    >
+      <!-- navbar -->
+      <nav class="px-4 w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
+        <div class="container flex justify-between py-5 mx-auto items-center">
+          <div class="flex items-center gap-2">
+            <!-- <img src="../img/logo.png" alt="" /> -->
+            <span class="text-indigo-900 text-2xl font-bold dark:text-white"
+              >Phuoc Pham</span
+            >
+          </div>
+          <ul
+            class="hidden md:flex md:space-x-10 text-gray-600 text-sm font-bold uppercase dark:text-gray-100"
+          >
+            <li class="hover:text-gray-500">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#about">About Me</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#services">Services</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#works">Works</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <div
+            id="hamburger-button"
+            class="space-y-1 md:hidden cursor-pointer z-20"
+          >
+            <div id="hamburger-button-bar" class="bg-black h-0.5 w-6"></div>
+            <div id="hamburger-button-bar" class="bg-black h-0.5 w-6"></div>
+            <div id="hamburger-button-bar" class="bg-black h-0.5 w-6"></div>
+          </div>
+
+          <ul
+            id="hamburger-menu"
+            class="hidden absolute left-0 top-0 p-10 space-y-10 w-full text-center bg-indigo-900 rounded-b-3xl text-white text-sm font-bold uppercase"
+          >
+            <li class="hover:text-gray-500">
+              <a id="hLink" href="#">Home</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a id="hLink" href="#about">About Me</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a id="hLink" href="#services">Services</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a id="hLink" href="#works">Works</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a id="hLink" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <img
+            src="../img/moon.png"
+            id="moon"
+            alt=""
+            class="hidden md:block w-5 cursor-pointer"
+          />
+        </div>
+      </nav>
+
+      <!-- intro content -->
+      <!-- image -->
+      <img
+        class="absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover"
+        src="../img/dev.png"
+        alt=""
+      />
+      <!-- circle -->
+      <div
+        class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-red-900 rounded-full -z-10"
+      ></div>
+      <!-- animated text -->
+      <div
+        class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold"
+      >
+        <span id="adj-text" class="text-gray-600">Professional</span>
+        <p id="noun-text" class="text-red-500"></p>
+      </div>
+      <!-- texts -->
+      <div
+        class="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit w-1/3 dark:bg-slate-900 dark:shadow-slate-800"
+      >
+        <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm Phuoc</h1>
+        <p class="text-gray-400">
+          With over 3 years of rocking website and app development, plus some
+          nifty data engineering skills, I’m all about crafting awesome,
+          user-friendly solutions. I love diving into new tech, keeping things
+          fresh, and making sure every project hits the mark. Let’s build
+          something amazing together!
+        </p>
+        <a
+          class="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit"
+          href="#contact"
+          >Contact Me</a
+        >
+      </div>
+    </div>
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+      <div
+        class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20"
+      >
+        <!-- left -->
+        <div class="relative">
+          <img
+            class="h-1/4 absolute top-0 left-0 -z-10"
+            src="../img/dots.png"
+            alt=""
+          />
+          <div class="h-full rounded-full overflow-hidden">
+            <img src="../img/about.jpeg" alt="" />
+          </div>
+        </div>
+        <!-- right -->
+        <div class="my-auto flex flex-col gap-3">
+          <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+          <h1 class="text-3xl font-medium dark:text-white">
+            Full-Stack Development
+          </h1>
+          <h1 class="text-3xl font-medium dark:text-white">
+            Data Engineering Excellence
+          </h1>
+          <p class="text-gray-400">
+            I specialize in designing and developing digital solutions with a
+            passion for innovation and user-centric design. My journey spans
+            over 3 years in website and application development as well as data
+            engineering, where I thrive on creating impactful, tech-savvy
+            solutions that elevate user experiences
+          </p>
+          <h2 class="text-gray-400 font-medium">Javascript / TypeScript</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-6/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Python</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-6/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Pandas / Numpy / SQL</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="6/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">React / React Native</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-6/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Next JS</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-6/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Django</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-6/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- services -->
+    <div id="services" class="py-40 dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold">SERVICES</h1>
+          <h1 class="text-3xl dark:text-white">What do I offer?</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            I offer dedicated services to bring your ideas to life with
+            creativity and precision. Whether it’s developing cutting-edge
+            websites, crafting robust applications, or optimizing data
+            engineering solutions, I ensure each project reflects your vision
+            and delivers exceptional results.
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="../img/web.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">Website making</h1>
+            <p class="text-gray-400">
+              I craft interactive websites for individuals and small
+              businesses.
+            </p>
+            <a class="text-indigo-600 font-semibold text-sm" href="#contact"
+              >Let me know about your ideal website</a
+            >
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="../img/app.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">
+              Application producing
+            </h1>
+            <p class="text-gray-400">
+              I create utility app to solve customers' needs.
+            </p>
+            <a class="text-indigo-600 font-semibold text-sm" href="#contact"
+              >Let me hear your requirements</a
+            >
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="../img/data.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">
+              Data Engineering
+            </h1>
+            <p class="text-gray-400">
+              I build data pipelines to turn raw data to insightful knowledge.
+            </p>
+            <a class="text-indigo-600 font-semibold text-sm" href="#contact"
+              >Let me help clean up your data</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- works -->
+    <div id="works" class="py-40 dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold">PORTFOLIO</h1>
+          <h1 class="text-3xl dark:text-white">Works & Projects</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            I help clients, agencies and businesses bring their ideas to life.
+            Powered by Figma, VS Code and coffee, I turn your requirements into
+            well-designed websites, applications, and insights.
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+          <!-- card -->
+          <div
+            class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+          >
+            <img src="../img/portfolio.png" />
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+          >
+            <img src="../img/wedding.jpeg" />
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+          >
+            <img src="../img/clock.png" />
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+          >
+            <img src="../img/moshify.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="py-40 dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold">CONTACT</h1>
+          <h1 class="text-3xl dark:text-white">Have a Question?</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            Do you have an idea? Let's discuss it and see what we can do
+            together.
+          </p>
+        </div>
+        <!-- bottom -->
+        <form
+          class="mt-5 p-8 flex flex-col gap-5 items-center"
+          action="https://formsubmit.co/phamhbphuoc@gmail.com"
+          method="POST"
+        >
+          <input
+            class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+            type="text"
+            name="name"
+            placeholder="John Doe"
+          />
+          <input
+            class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+            cols="30"
+            rows="10"
+            placeholder="Message..."
+            name="message"
+          ></textarea>
+          <button
+            class="w-1/2 bg-indigo-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="w-full bg-gray-800">
+      <div class="container mx-auto py-5 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <!-- <img class="w-8" src="../img/logo.png" alt="" /> -->
+          <span class="text-2xl font-bold text-white">Phuoc Pham</span>
+        </div>
+        <!-- <span class="hidden md:block font-medium text-white"
+          >Crafted with ♥️ by Phuoc Pham. Special thanks to Lama Dev</span
+        > -->
+        <div class="flex gap-2">
+          <a href="https://facebook.com/phamhbphuoc" target="_blank"
+            ><img class="w-4 cursor-pointer" src="../img/facebook.png" alt=""
+          /></a>
+          <a href="https://instagram.com/phamhbphuoc" target="_blank"
+            ><img class="w-4 cursor-pointer" src="../img/instagram.png" alt=""
+          /></a>
+          <a href="https://x.com/phamhbphuoc" target="_blank"
+            ><img class="w-4 cursor-pointer" src="../img/twitter.png" alt=""
+          /></a>
+          <a href="https://linkedin.com/in/phamhbphuoc" target="_blank"
+            ><img class="w-4 cursor-pointer" src="../img/linkedin.png" alt=""
+          /></a>
+          <a href="https://github.com/weszerzad" target="_blank"
+            ><img class="w-4 cursor-pointer" src="../img/github.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
   </body>
 </html>
